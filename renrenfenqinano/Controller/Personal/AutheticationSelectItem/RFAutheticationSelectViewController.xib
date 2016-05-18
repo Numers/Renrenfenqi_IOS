@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RFAutheticationSelectViewController">
+            <connections>
+                <outlet property="tableView" destination="y47-Sd-oSm" id="c7Y-vd-oCH"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HDh-1a-67i">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="64"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MCE-DL-SLJ">
+                            <rect key="frame" x="0.0" y="20" width="44" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="44" id="RML-X3-u67"/>
+                                <constraint firstAttribute="width" secondItem="MCE-DL-SLJ" secondAttribute="height" multiplier="1:1" id="wnw-v9-2te"/>
+                            </constraints>
+                            <state key="normal" image="common_back_white.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="clickBackBtn:" destination="-1" eventType="touchUpInside" id="eS0-ad-rpe"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="认证" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L9N-8c-5pv">
+                            <rect key="frame" x="283" y="32" width="34" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.94901960780000005" green="0.26274509800000001" blue="0.32156862749999998" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="L9N-8c-5pv" firstAttribute="top" secondItem="HDh-1a-67i" secondAttribute="top" constant="32" id="3cS-J4-SLW"/>
+                        <constraint firstItem="MCE-DL-SLJ" firstAttribute="leading" secondItem="HDh-1a-67i" secondAttribute="leading" id="Dyf-eP-5eF"/>
+                        <constraint firstAttribute="centerX" secondItem="L9N-8c-5pv" secondAttribute="centerX" id="eC6-Gz-JqH"/>
+                        <constraint firstAttribute="height" constant="64" id="iSu-7S-QGB"/>
+                        <constraint firstItem="MCE-DL-SLJ" firstAttribute="top" secondItem="HDh-1a-67i" secondAttribute="top" constant="20" id="y4Z-pr-Vf7"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="y47-Sd-oSm">
+                    <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="j2H-fw-QTl"/>
+                        <outlet property="delegate" destination="-1" id="pZI-D5-fuY"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="HDh-1a-67i" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Dbe-Tn-2sf"/>
+                <constraint firstItem="y47-Sd-oSm" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Ef3-QN-gUh"/>
+                <constraint firstItem="HDh-1a-67i" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Okd-jR-NM8"/>
+                <constraint firstAttribute="trailing" secondItem="y47-Sd-oSm" secondAttribute="trailing" id="R0O-ug-hCX"/>
+                <constraint firstAttribute="trailing" secondItem="HDh-1a-67i" secondAttribute="trailing" id="ivq-WO-YBr"/>
+                <constraint firstItem="y47-Sd-oSm" firstAttribute="top" secondItem="HDh-1a-67i" secondAttribute="bottom" id="k2B-kw-PsM"/>
+                <constraint firstAttribute="bottom" secondItem="y47-Sd-oSm" secondAttribute="bottom" id="wG9-sR-JZt"/>
+            </constraints>
+        </view>
+    </objects>
+    <resources>
+        <image name="common_back_white.png" width="44" height="44"/>
+    </resources>
+</document>
